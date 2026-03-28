@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP12C Mobile (Protótipo)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Calculadora HP12C (Protótipo)</h1>
+      <p class="subtitle">RPN + funções financeiras básicas</p>
+
+      <section class="display-card">
+        <div class="label">Display (X)</div>
+        <div id="display" class="display">0,00</div>
+        <div id="stack" class="stack">Y: 0 | Z: 0 | T: 0</div>
+      </section>
+
+      <section class="input-card">
+        <input id="numberInput" type="text" inputmode="decimal" placeholder="Digite um número" />
+        <button id="enterBtn">ENTER</button>
+      </section>
+
+      <section class="grid">
+        <button data-op="+">+</button>
+        <button data-op="-">-</button>
+        <button data-op="*">×</button>
+        <button data-op="/">÷</button>
+
+        <button id="chsBtn">CHS</button>
+        <button id="percentBtn">%</button>
+        <button id="swapBtn">x↔y</button>
+        <button id="clearBtn">CLX</button>
+      </section>
+
+      <section class="finance">
+        <h2>Financeiro</h2>
+        <div class="fin-grid">
+          <button id="saveN">n</button>
+          <button id="saveI">i</button>
+          <button id="savePV">PV</button>
+          <button id="savePMT">PMT</button>
+          <button id="saveFV">FV</button>
+          <button id="calcFV">Calcular FV</button>
+          <button id="calcPMT">Calcular PMT</button>
+        </div>
+        <div id="finValues" class="fin-values">n=0 | i=0 | PV=0 | PMT=0 | FV=0</div>
+      </section>
+
+      <section class="memory">
+        <h2>Memória</h2>
+        <div class="memory-controls">
+          <label>
+            Slot
+            <select id="memSlot">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </label>
+          <button id="stoBtn">STO</button>
+          <button id="rclBtn">RCL</button>
+          <span id="memoryState">M0=0 | M1=0 | M2=0 | M3=0 | M4=0</span>
+        </div>
+      </section>
+
+      <section class="settings">
+        <h2>Configurações</h2>
+        <div class="settings-row">
+          <label>
+            Casas decimais
+            <input id="decimals" type="number" min="0" max="10" value="2" />
+          </label>
+          <label>
+            Separador decimal
+            <select id="separator">
+              <option value=",">Vírgula (,)</option>
+              <option value=".">Ponto (.)</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <p class="note">Dica: para usar no celular, abra este arquivo em um servidor local e acesse pelo navegador.</p>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

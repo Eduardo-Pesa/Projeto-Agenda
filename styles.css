@@ -1,0 +1,92 @@
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  background: #111827;
+  color: #f9fafb;
+}
+
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+h1,h2,p { margin: 0; }
+.subtitle { opacity: .8; }
+
+.display-card,
+.input-card,
+.finance,
+.memory,
+.settings {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: .9rem;
+}
+
+.display {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: .2rem 0;
+  word-break: break-all;
+}
+
+.stack,
+.fin-values,
+#memoryState,
+.note {
+  font-size: .85rem;
+  opacity: .85;
+}
+
+.input-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .5rem;
+}
+
+input,select,button {
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #4b5563;
+  padding: .55rem .7rem;
+}
+
+button {
+  background: #0ea5e9;
+  color: white;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .5rem;
+}
+
+.fin-grid {
+  margin-top: .6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5rem;
+}
+
+.memory-controls,
+.settings-row {
+  margin-top: .6rem;
+  display: grid;
+  gap: .5rem;
+}
+
+@media (min-width: 640px) {
+  .settings-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
