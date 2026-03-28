@@ -1,32 +1,40 @@
 # Calculadora Financeira estilo HP-12C para App Store
 
-Este repositório contém a proposta funcional, guia de uso e plano de publicação de um app de calculadora financeira **inspirada na HP-12C**, focado em uso em celulares (iOS), com:
+Agora este repositório tem um **protótipo funcional web** para você já testar a calculadora no celular.
 
-- Operação em **RPN** (notação polonesa reversa)
-- Funções financeiras (PV, FV, PMT, i, n)
-- Memórias para salvar valores
-- Fórmulas pré-configuradas
-- Ajuste de casas decimais
-- Configuração de separadores decimais (**vírgula ou ponto**)
-- Manual de uso e exemplos práticos
+## Como usar (rápido)
 
-## Estrutura
+1. No terminal, dentro da pasta do projeto, rode:
 
-- `MANUAL_HP12C_APP.md` → Manual completo para o usuário final
-- `ROADMAP_PRODUTO.md` → Plano de produto e publicação na App Store
+```bash
+python3 -m http.server 8080
+```
 
-## Público-alvo
+2. Abra no navegador:
+- No computador: `http://localhost:8080`
+- No celular (mesma rede): `http://SEU_IP_LOCAL:8080`
 
-- Profissionais de finanças
-- Estudantes de administração/economia
-- Corretores e analistas
-- Pessoas que já usam HP-12C física e querem mobilidade no celular
+3. A calculadora vai aparecer na tela principal (`index.html`).
 
-## Objetivo do MVP
+## Funcionalidades implementadas no protótipo
 
-Entregar um app simples, rápido e fiel à lógica da HP-12C, com foco em:
+- Operações RPN (ENTER, +, -, ×, ÷)
+- Pilha X/Y/Z/T visível
+- Funções financeiras com registradores `n`, `i`, `PV`, `PMT`, `FV`
+- Cálculo de `FV` e `PMT`
+- Memória `STO` e `RCL` (slots 0 a 4)
+- Ajuste de casas decimais (0 a 10)
+- Troca de separador decimal (vírgula ou ponto)
 
-1. confiança nos cálculos
-2. curva de aprendizado reduzida
-3. documentação clara dentro do app
+## Arquivos principais
 
+- `index.html` → Interface da calculadora
+- `styles.css` → Estilo da interface
+- `app.js` → Lógica RPN, memória e funções financeiras
+- `MANUAL_HP12C_APP.md` → Manual detalhado com exemplos
+- `ROADMAP_PRODUTO.md` → Plano de produto e App Store
+
+## Observação importante
+
+Se “não aparece nada”, normalmente é porque o arquivo foi aberto de forma incorreta.
+Use sempre por servidor local (`python3 -m http.server`) e abra no navegador pelo endereço mostrado no terminal.
